@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ViPs resource directory</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style>
+h1, h2 {
+    margin-top: 1em;
+}
+.rsc {
+    background-color: #fff5ee;
+    color: black;
+    padding: 5px;
+    margin-top: 1em;
+}
+.rsc h3 a {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: black;
+}
+.rsc > div > a {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    display: block;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>ViPs</h1>
+                    <p>Browse resources below, filter by categories, or search (Ctrl-F).</p>
+                    <p>Wish to add, remove, or modify the resource list? Go to the github <a href="https://github.com/serialc/VIPs_browser">ViPs Browser repository</a>.</p>
+                </div>
+                <div class="col-12">
+                    <h2>Filters</h2>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <label class="form-label" for="sel_period">Period (e.g. Quaternary)</label>
+                            <select id="sel_period" class="form-select mb-4" name="sel_period"></select>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <label class="form-label" for="sel_sector">Sector (e.g., Proxy, Field, Microscope)</label>
+                            <select id="sel_sector" class="form-select mb-4" name="sel_sector"></select>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <label class="form-label" for="sel_activity">Activity (e.g., Analysis, Interpretation)</label>
+                            <select id="sel_activity" class="form-select mb-4" name="sel_activity"></select>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <label class="form-label" for="sel_environment">Environment (e.g. Bog)</label>
+                            <select id="sel_environment" class="form-select mb-4" name="sel_environment"></select>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <label class="form-label" for="sel_type">Type (e.g., Article, Movie)</label>
+                            <select id="sel_type" class="form-select mb-4" name="sel_type"></select>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <label class="form-label" for="sel_action">Action (e.g., Read, Watch)</label>
+                            <select id="sel_action" class="form-select mb-4" name="sel_action"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h2>Resources <span id="rsc_count"></span></h2>
+                    <div id="resources_container" class="row"></div>
+                </div>
+            </div>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/vips_resouce_database.js"></script>
+        <script src="js/vips.js"></script>
+    </body>
+</html>
+
