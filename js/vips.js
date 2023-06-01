@@ -9,7 +9,8 @@ ViPs = {
             "activity":[],
             "environment":[],
             "type":[],
-            "action":[]
+            "action":[],
+            "location":[]
         },
     "active": 
         {
@@ -18,7 +19,8 @@ ViPs = {
             "activity":null,
             "environment":null,
             "type":null,
-            "action":null
+            "action":null,
+            "location":null
         }
 };
 

@@ -32,10 +32,28 @@ h1, h2 {
     <body>
         <div class="container">
             <div class="row">
+                <div class="col-12 mb-4">
+                    <h1>Virtual Palaeoscience (ViPs)</h1>
+                </div>
+                <div class="col-lg-6">
+                    <p>The <a href="https://virtualpalaeoscience.uk/">Virtual Palaeoscience project</a> began in Spring 2020, as part of the emergency pivot to online learning in response to Covid-19 restrictions across the university sector.
+                    The initial aim was to bring together a community of educators to share resources and resource creation to meet the immediate needs of the sector. The project has evolved into a community of practice focused on digitally enhanced learning and its potential to increase inclusion in our academic fields.
+                    You can find out more about the project at our <a href="https://virtualpalaeoscience.uk/">webpage</a>.
+                </div>
+                <div class="col-lg-6">
+                    <p>“Palaeoscience” is defined broadly as any study of longer term earth system processes or of the past, encompassing terms such as environmental change, palaeoecology, Quaternary Science, or environmental archaeology.
+                    This type of content is taught in a wide range of academic contexts, including geography, environmental science and earth science, therefore finding resources can be a challenge.
+                    A key initial activity was to collate existing resources available on the internet.
+                    <strong>That initial spreadsheet underlies the web interface presented here.</strong>
+                    This spreadsheet was last updated in <a href="https://virtualpalaeoscience.uk/search-resources/">January 2022</a>.</p>
+
+                </div>
+
                 <div class="col-12">
-                    <h1>ViPs</h1>
-                    <p>Browse resources below, filter by categories, or search (Ctrl-F).</p>
-                    <p>Wish to add, remove, or modify the resource list? Go to the github <a href="https://github.com/serialc/VIPs_browser">ViPs Browser repository</a>.</p>
+                    <hr>
+                    <p>Browse the resources below, filter by categories, or search using your browser (Ctrl-F).</p>
+
+                    <p>If you wish to add, remove, or modify the resource please go to the github <a href="https://github.com/serialc/VIPs_browser">repository</a> and change the database entries in source file <a href="https://github.com/serialc/VIPs_browser/blob/main/js/vips_resource_database.js">js/vips_resource_database.js</a>.</p>
                 </div>
                 <div class="col-12">
                     <h2>Filters</h2>
@@ -63,6 +81,10 @@ h1, h2 {
                         <div class="col-lg-4 col-md-6">
                             <label class="form-label" for="sel_action">Action (e.g., Read, Watch)</label>
                             <select id="sel_action" class="form-select mb-4" name="sel_action"></select>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <label class="form-label" for="sel_location">Location (e.g., Read, Watch)</label>
+                            <select id="sel_location" class="form-select mb-4" name="sel_action"></select>
                         </div>
                     </div>
                 </div>
