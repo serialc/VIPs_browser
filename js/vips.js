@@ -106,7 +106,7 @@ ViPs.displayResources = function() {
         let rbody = document.createElement('div');
         rbody.innerHTML =
             '<a href="' + item.URL + '" target="_blank">' + item.URL + '</a>'  +
-            'Creator(s): <b>' + (item.IP === null ? 'Unknown':item.IP) + '</b><hr>' +
+            'Creator(s)/IP: <b>' + (item.IP === null ? 'Unknown':item.IP) + '</b><hr>' +
             '<p>Location: <b>' + item.locaion + '</b> Period: <b>' + item.period + '</b><br>' +
             'Sector: <b>' + item.sector + '</b> Environment: <b>' + item.environment + '</b><br>' +
             'Action: <b>' + item.action + '</b> Activity: <b>' + item.activity + '</b> Type: <b>' + item.type + '</b></p>' +
