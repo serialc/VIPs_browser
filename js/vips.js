@@ -107,7 +107,7 @@ ViPs.displayResources = function() {
         rbody.innerHTML =
             '<a href="' + item.URL + '" target="_blank">' + item.URL + '</a>'  +
             'Creator(s)/IP: <b>' + (item.IP === null ? 'Unknown':item.IP) + '</b><hr>' +
-            '<p>Location: <b>' + item.locaion + '</b> Period: <b>' + item.period + '</b><br>' +
+            '<p>Location: <b>' + item.location + '</b> Period: <b>' + item.period + '</b><br>' +
             'Sector: <b>' + item.sector + '</b> Environment: <b>' + item.environment + '</b><br>' +
             'Action: <b>' + item.action + '</b> Activity: <b>' + item.activity + '</b> Type: <b>' + item.type + '</b></p>' +
             '<p><b>Review:</b> ' + item.Rev + '<br>Reviewer: <b>' + item.Reviewer + '</b></p>' +
