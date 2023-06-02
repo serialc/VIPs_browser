@@ -12,16 +12,14 @@ ViPs = {
             "action":[],
             "location":[]
         },
-    "active": 
-        {
-            "period":null,
-            "sector":null,
-            "activity":null,
-            "environment":null,
-            "type":null,
-            "action":null,
-            "location":null
-        }
+    "active": {}
+};
+
+ViPs.clearActiveFilters = function() {
+    // goes through all the filters
+    for (let fname in ViPs.filters) {
+        ViPs.active[fname] = null;
+    }
 };
 
 // calculate types of attributes to populate drop-down lists
@@ -32,6 +30,7 @@ ViPs.buildAttributes = function() {
 
         // goes through all the filters
         for (let fname in ViPs.filters) {
+
             // fill ViPs.filters.*
             if ( ! ViPs.filters[fname].includes(rsc[fname]) )  {
                 ViPs.filters[fname].push(rsc[fname]);
@@ -48,7 +47,10 @@ ViPs.buildAttributes = function() {
 ViPs.updateSelectionOptions = function() {
     for (let fname in ViPs.filters) {
         
+        // get target and empty it
         let target = document.getElementById('sel_' + fname);
+        target.innerHTML = '';
+
         let opt = document.createElement("option");
         opt.value = '';
         opt.innerHTML = "Select...";
@@ -84,6 +86,8 @@ ViPs.displayResources = function() {
         // filter
         let skip = false;
         for (let fname in ViPs.active) {
+
+            // if this filter is active and this item does not match the filter, skip it
             if (ViPs.active[fname] !== null && ViPs.active[fname] !== item[fname]) {
                 skip = true;
             }
@@ -134,12 +138,22 @@ ViPs.displayResources = function() {
 // initialize
 ViPs.initializeForm = function() {
 
+    // clear the active filters in the object model
+    ViPs.clearActiveFilters();
+
     // update the list of attributes
     ViPs.buildAttributes();
 
     // populate the select inputs
     ViPs.updateSelectionOptions();
 
-    // display the resources based on filters
+    // display the resources based on filters ViPs.displayResources();
     ViPs.displayResources();
+
+    // add the filter clearing event and the actions
+    document.getElementById('clear_filters').addEventListener('click', function() {
+        ViPs.clearActiveFilters();
+        ViPs.updateSelectionOptions();
+        ViPs.displayResources();
+    });
 }();
